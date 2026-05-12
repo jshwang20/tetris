@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tetris — 소개</title>
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+
+  <!-- Auth nav -->
+  <div id="auth-nav">
+    <span id="auth-greeting"></span>
+    <a id="auth-link" href="auth.html" class="auth-nav-btn">로그인 / 회원가입</a>
+    <button id="auth-logout" class="auth-nav-btn hidden">로그아웃</button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <span class="hero-badge">CLASSIC PUZZLE GAME</span>
+    <h1 class="hero-title">TETRIS</h1>
+
+    <div class="blocks-preview" aria-hidden="true">
+      <div class="block" style="background:#22d3ee; box-shadow:0 0 10px rgba(34,211,238,0.5)"></div>
+      <div class="block" style="background:#fde047; box-shadow:0 0 10px rgba(253,224,71,0.5)"></div>
+      <div class="block" style="background:#c084fc; box-shadow:0 0 10px rgba(192,132,252,0.5)"></div>
+      <div class="block" style="background:#4ade80; box-shadow:0 0 10px rgba(74,222,128,0.5)"></div>
+      <div class="block" style="background:#f87171; box-shadow:0 0 10px rgba(248,113,113,0.5)"></div>
+      <div class="block" style="background:#60a5fa; box-shadow:0 0 10px rgba(96,165,250,0.5)"></div>
+      <div class="block" style="background:#fb923c; box-shadow:0 0 10px rgba(251,146,60,0.5)"></div>
+    </div>
+
+    <p class="hero-desc">
+      7가지 테트로미노 블록을 조종하여 가로 줄을 완성하세요.<br>
+      줄이 꽉 차면 사라지고 점수를 얻습니다. 블록이 쌓여 천장에 닿으면 게임 오버.
+    </p>
+
+    <a class="play-btn" href="game.html">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      지금 바로 플레이
+    </a>
+  </section>
+
+  <main>
+
+    <!-- Features -->
+    <section>
+      <p class="section-label">FEATURES</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🎮</span>
+          <p class="feature-title">직관적인 조작</p>
+          <p class="feature-body">키보드 방향키만으로 누구나 바로 즐길 수 있습니다. 별도 설치 없이 브라우저에서 즉시 실행됩니다.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">👻</span>
+          <p class="feature-title">고스트 피스</p>
+          <p class="feature-body">블록이 떨어질 위치를 반투명하게 미리 표시해 줍니다. 정확한 위치에 블록을 내려놓을 수 있습니다.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📦</span>
+          <p class="feature-title">다음 블록 미리보기</p>
+          <p class="feature-body">다음에 나올 테트로미노를 사전에 확인하고 전략적으로 배치할 수 있습니다.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">⬆️</span>
+          <p class="feature-title">레벨 시스템</p>
+          <p class="feature-body">10줄을 클리어할 때마다 레벨이 올라가고 블록 낙하 속도가 빨라집니다. 최대 레벨 11까지 도전하세요.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <section>
+      <p class="section-label">조작 방법</p>
+      <div class="controls-section">
+        <div class="controls-grid">
+          <div>
+            <div class="control-row">
+              <div class="key-group"><kbd>←</kbd><kbd>→</kbd></div>
+              <div>
+                <p class="control-action">좌우 이동</p>
+                <p class="control-desc">블록을 좌우로 이동</p>
+              </div>
+            </div>
+            <div class="control-row">
+              <div class="key-group"><kbd>↑</kbd></div>
+              <div>
+                <p class="control-action">회전</p>
+                <p class="control-desc">블록을 시계 방향으로 회전</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="control-row">
+              <div class="key-group"><kbd>↓</kbd></div>
+              <div>
+                <p class="control-action">소프트 드롭</p>
+                <p class="control-desc">블록을 한 칸씩 빠르게 내림</p>
+              </div>
+            </div>
+            <div class="control-row">
+              <div class="key-group"><kbd>Space</kbd></div>
+              <div>
+                <p class="control-action">하드 드롭</p>
+                <p class="control-desc">블록을 즉시 바닥으로 내림</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Score -->
+    <section class="score-section">
+      <p class="section-label">점수 시스템</p>
+      <div class="score-table">
+        <div class="score-row header">
+          <span>클리어 줄 수</span>
+          <span>획득 점수</span>
+          <span>비고</span>
+        </div>
+        <div class="score-row">
+          <span class="score-lines">1줄</span>
+          <span class="score-pts">100점</span>
+          <span class="score-note">Single</span>
+        </div>
+        <div class="score-row">
+          <span class="score-lines">2줄</span>
+          <span class="score-pts">300점</span>
+          <span class="score-note">Double</span>
+        </div>
+        <div class="score-row">
+          <span class="score-lines">3줄</span>
+          <span class="score-pts">500점</span>
+          <span class="score-note">Triple</span>
+        </div>
+        <div class="score-row">
+          <span class="score-lines">4줄</span>
+          <span class="score-pts">800점</span>
+          <span class="score-note">Tetris! — 한 번에 4줄 동시 클리어</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pieces -->
+    <section class="pieces-section">
+      <p class="section-label">테트로미노 블록</p>
+      <div class="pieces-grid" id="pieces-grid"></div>
+    </section>
+
+    <!-- Leaderboard -->
+    <section class="leaderboard-section">
+      <p class="section-label">LEADERBOARD</p>
+      <div class="leaderboard-wrap">
+        <table class="leaderboard-table">
+          <thead>
+            <tr><th>#</th><th>플레이어</th><th>점수</th><th>레벨</th><th>라인</th></tr>
+          </thead>
+          <tbody id="lb-body">
+            <tr><td colspan="5" class="lb-loading">불러오는 중...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta">
+      <p>준비됐나요? 지금 바로 도전해보세요!</p>
+      <a class="play-btn" href="game.html">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        플레이 시작
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Tetris MVP &mdash; jshwang20
+  </footer>
+
+  <script src="session.js"></script>
+  <script src="landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tetris — 로그인</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <a class="back-link" href="index.html">&#8592; 랜딩으로</a>
+
+  <div class="auth-card">
+    <h1 class="logo">TETRIS</h1>
+
+    <div class="tab-row">
+      <button class="tab active" data-tab="login">로그인</button>
+      <button class="tab" data-tab="register">회원가입</button>
+    </div>
+
+    <!-- 로그인 폼 -->
+    <form id="login-form" class="auth-form">
+      <label>이메일
+        <input type="email" id="login-email" required placeholder="you@example.com" autocomplete="email" />
+      </label>
+      <label>비밀번호
+        <input type="password" id="login-pw" required placeholder="비밀번호" autocomplete="current-password" />
+      </label>
+      <p class="form-error hidden" id="login-error"></p>
+      <button type="submit" class="submit-btn">로그인</button>
+    </form>
+
+    <!-- 회원가입 폼 -->
+    <form id="register-form" class="auth-form hidden">
+      <label>이메일
+        <input type="email" id="reg-email" required placeholder="you@example.com" autocomplete="email" />
+      </label>
+      <label>닉네임 <span class="hint">(최대 20자)</span>
+        <input type="text" id="reg-username" required maxlength="20" placeholder="닉네임" autocomplete="username" />
+      </label>
+      <label>비밀번호 <span class="hint">(6자 이상)</span>
+        <input type="password" id="reg-pw" required minlength="6" placeholder="비밀번호" autocomplete="new-password" />
+      </label>
+      <p class="form-error hidden" id="reg-error"></p>
+      <button type="submit" class="submit-btn">회원가입</button>
+    </form>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>

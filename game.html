@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tetris — Play</title>
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+  <a id="back-btn" href="index.html">&#8592; Back</a>
+
+  <div id="user-bar">
+    <span id="user-greeting"></span>
+    <button id="logout-btn">로그아웃</button>
+  </div>
+
+  <header><h1>TETRIS</h1></header>
+
+  <div id="game-wrap">
+    <aside id="panel-left">
+      <div class="info-box">
+        <p class="info-label">SCORE</p>
+        <p class="info-value" id="score">0</p>
+      </div>
+      <div class="info-box">
+        <p class="info-label">LINES</p>
+        <p class="info-value" id="lines">0</p>
+      </div>
+      <div class="info-box">
+        <p class="info-label">LEVEL</p>
+        <p class="info-value" id="level">1</p>
+      </div>
+      <div class="info-box info-box--best">
+        <p class="info-label">BEST</p>
+        <p class="info-value info-value--best" id="global-best-score">—</p>
+        <p class="info-sub" id="global-best-name"></p>
+      </div>
+    </aside>
+
+    <div id="canvas-wrap">
+      <canvas id="board"></canvas>
+      <div id="overlay" class="hidden">
+        <p class="overlay-title">GAME OVER</p>
+        <p class="overlay-score">Score: <span id="final-score">0</span></p>
+        <p class="overlay-saved hidden" id="save-status"></p>
+        <div class="overlay-cols">
+          <div class="overlay-col">
+            <p class="lb-title">내 기록</p>
+            <ul id="my-history-list"></ul>
+          </div>
+          <div class="overlay-col">
+            <p class="lb-title">TOP 5</p>
+            <ul id="leaderboard-list"></ul>
+          </div>
+        </div>
+        <button id="restart-btn">RESTART</button>
+      </div>
+    </div>
+
+    <aside id="panel-right">
+      <div class="info-box">
+        <p class="info-label">NEXT</p>
+        <canvas id="preview"></canvas>
+      </div>
+      <div class="info-box">
+        <p class="info-label">CONTROLS</p>
+        <ul class="controls-list">
+          <li><kbd>← →</kbd> Move</li>
+          <li><kbd>↑</kbd> Rotate</li>
+          <li><kbd>↓</kbd> Soft drop</li>
+          <li><kbd>SPC</kbd> Hard drop</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <script src="session.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
